@@ -1,0 +1,133 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Eden Attire Luxury Color Palette */
+  --gold: #C9A050;
+  --gold-light: #D4B06A;
+  --gold-dark: #A88A3D;
+  --cream: #FAF8F5;
+  --cream-dark: #F5F0E8;
+  --charcoal: #1A1A1A;
+  --warm-gray: #6B6B6B;
+  --warm-gray-light: #9A9A9A;
+
+  /* Semantic Design Tokens */
+  --background: var(--cream);
+  --foreground: var(--charcoal);
+  --card: #FFFFFF;
+  --card-foreground: var(--charcoal);
+  --popover: #FFFFFF;
+  --popover-foreground: var(--charcoal);
+  --primary: var(--gold);
+  --primary-foreground: #FFFFFF;
+  --secondary: var(--cream-dark);
+  --secondary-foreground: var(--charcoal);
+  --muted: var(--cream-dark);
+  --muted-foreground: var(--warm-gray);
+  --accent: var(--gold-light);
+  --accent-foreground: var(--charcoal);
+  --destructive: #DC2626;
+  --destructive-foreground: #FFFFFF;
+  --border: #E5E2DC;
+  --input: #E5E2DC;
+  --ring: var(--gold);
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: var(--charcoal);
+  --foreground: var(--cream);
+  --card: #262626;
+  --card-foreground: var(--cream);
+  --popover: #262626;
+  --popover-foreground: var(--cream);
+  --primary: var(--gold);
+  --primary-foreground: var(--charcoal);
+  --secondary: #333333;
+  --secondary-foreground: var(--cream);
+  --muted: #333333;
+  --muted-foreground: var(--warm-gray-light);
+  --accent: var(--gold-dark);
+  --accent-foreground: var(--cream);
+  --border: #404040;
+  --input: #404040;
+  --ring: var(--gold);
+}
+
+@theme inline {
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  --font-script: 'Great Vibes', cursive;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  
+  /* Eden Attire Custom Colors */
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-dark: var(--gold-dark);
+  --color-cream: var(--cream);
+  --color-cream-dark: var(--cream-dark);
+  --color-charcoal: var(--charcoal);
+  --color-warm-gray: var(--warm-gray);
+  --color-warm-gray-light: var(--warm-gray-light);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Custom Utility Classes */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+  .font-script {
+    font-family: var(--font-script);
+  }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection Color */
+::selection {
+  background-color: var(--gold);
+  color: white;
+}
