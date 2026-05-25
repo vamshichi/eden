@@ -39,7 +39,7 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
 
   return (
     <div className="min-h-screen bg-cream">
-      <AnnouncementBar />
+      {/* <AnnouncementBar /> */}
       <Header />
       
       <main className="pt-32 pb-20">
@@ -141,7 +141,7 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
               </h1>
               
               {/* Rating */}
-              <div className="flex items-center gap-3 mb-4">
+              {/* <div className="flex items-center gap-3 mb-4">
                 <div className="flex items-center gap-1">
                   {Array.from({ length: 5 }).map((_, i) => (
                     <Star
@@ -156,7 +156,7 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
                 <span className="text-sm text-warm-gray">
                   {product.rating} ({product.reviews} reviews)
                 </span>
-              </div>
+              </div> */}
 
               {/* Price */}
               <div className="flex items-baseline gap-3 mb-6">
@@ -181,7 +181,7 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
               </p>
 
               {/* Color Selection */}
-              <div className="mb-6">
+              {/* <div className="mb-6">
                 <div className="flex items-center justify-between mb-3">
                   <span className="text-sm font-medium text-charcoal">Color: {selectedColor.name}</span>
                 </div>
@@ -204,7 +204,7 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
                     />
                   ))}
                 </div>
-              </div>
+              </div> */}
 
               {/* Size Selection */}
               <div className="mb-6">

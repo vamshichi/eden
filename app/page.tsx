@@ -27,16 +27,17 @@ export default function Home() {
           subtitle="Most Loved"
           viewAllLink="/trending"
         />
-        <ProductGrid
+        {/* <ProductGrid
           products={newArrivals}
           title="New Arrivals"
           subtitle="Just In"
           viewAllLink="/new-arrivals"
-        />
+        /> */}
         <WhyEdenAttire />
-        <FounderMessage />
+        
         <Testimonials />
-        <InstagramGallery />
+        {/* <InstagramGallery /> */}
+        <FounderMessage />
       </main>
       <Footer />
     </>

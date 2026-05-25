@@ -160,7 +160,7 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
           </div>
 
           {/* Color Options */}
-          {product.colors.length > 0 && (
+          {/* {product.colors.length > 0 && (
             <div className="flex items-center gap-1.5 pt-1">
               {product.colors.slice(0, 4).map((color) => (
                 <div
@@ -176,7 +176,7 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
                 </span>
               )}
             </div>
-          )}
+          )} */}
         </div>
       </Link>
     </motion.div>
